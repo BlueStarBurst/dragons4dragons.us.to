@@ -27,9 +27,9 @@
             </div>
 
 
-            <div class="imgs">
+            <ul class="imgs" id="images">
 
-            </div>
+            </ul>
         </div>
     </body>
 
@@ -38,6 +38,19 @@
 
 
 <script>
+
+    var list = document.getElementById("images");
+
+    var imageCount = 14;
+
+    for (var i = 1; i <= imageCount; i++) {
+        var li = document.createElement("li");
+        var img = document.createElement("img");
+        img.src = "./imgs/" + i + ".jpg";
+        li.appendChild(img)
+        list.appendChild(li);
+    }
+
     function redirect(url) {
         window.location.replace(url);
     }
